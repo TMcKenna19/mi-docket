@@ -1,7 +1,6 @@
 const TaskController = require("../controllers/task.controller");
 
 module.exports = app => {
-
     // Create 
     app.post("/api/tasks/create", TaskController.createTask);
 
@@ -16,5 +15,4 @@ module.exports = app => {
     
     // Delete
     app.delete("/api/tasks/delete/:_id", TaskController.deleteTask);
-
 }
