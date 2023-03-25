@@ -13,6 +13,17 @@ const AllTasks = () => {
     return (
         <>
         <h3>All Tasks on the docket</h3>
+        <div>
+        {
+            tasks ? tasks.map((tasks, i) => <div key={i} className="taskCard">
+                <h3>{tasks.name}</h3>
+                <h3>{}</h3>
+                <h3>{}</h3>
+            </div>) : "No tasks on the docket"
+        }
+
+        </div>
+        
 
         </>
     )
