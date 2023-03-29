@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
 import AllTasks from './Components/AllTasks';
@@ -14,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<AllTasks/>} />
         <Route path="/add" element={<AddTask />} />
-        <Route path="/updatetask" element={<UpdateTask />} />
+        <Route path="/updatetask/:_id" element={<UpdateTask />} />
         <Route path="/task/:_id" element={<OneTask />} />
       </Routes>
     </div>
