@@ -9,6 +9,14 @@ import { Link } from "react-router-dom";
 const OneTask = props => {
     const [oneTask, setOneTask] = useState(null)
     const {_id} = useParams();
+    const navigate = useNavigate();
+
+    const handleDelete = _id => {
+        axios.delete("http://localhost:8000/api/tasks/delete/" + _id)
+        .then(()=> console.log(`${oneTask.name} deleted!`))
+        .catch(err => console.log("Error: delete task", err))
+        navigate("/")
+    }
     
     useEffect(()=>{
         axios.get("http://localhost:8000/api/tasks/" + _id)
@@ -24,6 +32,7 @@ const OneTask = props => {
                 <p>Status: {oneTask.status}</p>
                 <p>Due Date: {oneTask.dueDate}</p>
                 <p>Notes: {oneTask.notes}</p>
+                <button type="submit" className="btn btn-outline-danger mt-3" onClick={ ()=> handleDelete(oneTask._id)}>Delete Task</button>
                 </div> : ""
             }
         </>
