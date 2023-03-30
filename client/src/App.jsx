@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route, Link } from 'react-router-dom';
 import AllTasks from './Components/AllTasks';
 import AddTask from './Components/AddTask';
