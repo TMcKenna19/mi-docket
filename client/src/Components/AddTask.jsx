@@ -47,7 +47,7 @@ const AddTask = props => {
                 </div>
                 <div>
                     <label htmlFor="notes">Notes: </label>
-                    <input type="text" name="notes" id="notes" className="form-control" value={formData.notes} onChange={changeHandler} />
+                    <textarea type="text" name="notes" id="notes" className="form-control" value={formData.notes} onChange={changeHandler} />
                     { formErrors.notes ? <span>{formErrors.notes.message}</span> : ""}
                 </div>
                 <div>

@@ -33,7 +33,7 @@ const OneTask = props => {
                 <p>Due Date: {oneTask.dueDate}</p>
                 <p>Notes: {oneTask.notes}</p>
                 <button type="submit" className="btn btn-outline-danger mt-3" onClick={ ()=> handleDelete(oneTask._id)}>Delete Task</button>
-                <Link to={`/updatetask/${oneTask._id}`}><button type="submit" className="btn btn-outline-dark mt-3">Edit Task</button></Link>
+                <Link to={`/updatetask/${oneTask._id}`}><button type="submit" className="btn btn-outline-dark mt-3">Update Task</button></Link>
                 </div> : ""
             }
         </>
