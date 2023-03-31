@@ -1,8 +1,9 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 
 
@@ -33,7 +34,7 @@ const OneTask = props => {
                 <p>Due Date: {oneTask.dueDate}</p>
                 <p>Notes: {oneTask.notes}</p>
                 <button type="submit" className="btn btn-outline-danger mt-3" onClick={ ()=> handleDelete(oneTask._id)}>Delete Task</button>
-                <Link to={`/updatetask/${oneTask._id}`}><button type="submit" className="btn btn-outline-dark mt-3">Update Task</button></Link>
+                <Link to={`/update/${oneTask._id}`}><button type="submit" className="btn btn-outline-dark mt-3">Update Task</button></Link>
                 </div> : ""
             }
         </>

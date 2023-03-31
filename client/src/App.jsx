@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<AllTasks/>} />
         <Route path="/add" element={<AddTask />} />
-        <Route path="/updatetask/:_id" element={<UpdateTask />} />
+        <Route path="/update/:_id" element={<UpdateTask />} />
         <Route path="/task/:_id" element={<OneTask />} />
       </Routes>
     </div>
