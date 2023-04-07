@@ -5,12 +5,14 @@ import AllTasks from './Components/AllTasks';
 import AddTask from './Components/AddTask';
 import UpdateTask from './Components/UpdateTask';
 import OneTask from './Components/OneTask';
+import WeatherApi from './Components/WeatherApi';
 
 
 function App() {
   return (
     <div className="App">
       <h1> <Link to={"/"}>Mi Docket</Link> | <Link to={"/add"}> Add Task </Link></h1>
+      <WeatherApi />
       <Routes>
         <Route path='/' element={<AllTasks/>} />
         <Route path="/add" element={<AddTask />} />
