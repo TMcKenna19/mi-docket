@@ -47,3 +47,5 @@ const WeatherApi= () => {
 };
 
 export default WeatherApi;
+
+// set up .env file 
