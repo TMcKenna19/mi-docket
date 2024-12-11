@@ -27,7 +27,7 @@ const OneTask = props => {
     return (
         <>
             {
-                oneTask ? <div>
+                oneTask ? <div className="one-task">
                 <h2>{oneTask.name}</h2>
                 <p>Priority: {oneTask.priority}</p>
                 <p>Status: {oneTask.status}</p>

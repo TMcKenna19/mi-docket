@@ -23,6 +23,11 @@ const TaskSchema = new mongoose.Schema({
     dueDate: {
         type: String,
         required: [true, "Due date is required"]
+    },
+
+    city: {
+        type: String,
+        required: [true, "City is required"]
     }
 
     

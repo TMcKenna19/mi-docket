@@ -14,7 +14,8 @@ const AddTask = props => {
         notes: "",
         priority: "",
         status: "New",
-        dueDate: ""
+        dueDate: "",
+        city: ""
     });
 
     const changeHandler = e => {
@@ -64,6 +65,11 @@ const AddTask = props => {
                     <label htmlFor="dueDate">Due Date: </label>
                     <input type="text" name="dueDate" id="dueDate" className="form-control" value={formData.dueDate} onChange={changeHandler} />
                     { formErrors.dueDate ? <span>{formErrors.dueDate.message}</span> : ""}
+                </div>
+                <div>
+                    <label htmlFor="city">City: </label>
+                    <input type="text" name="city" id="city" className="form-control" value={formData.city} onChange={changeHandler} />
+                    { formErrors.city ? <span>{formErrors.dueDate.message}</span> : ""}
                 </div>
                 
                 <button type="submit" className="btn btn-outline-dark mt-3" >Add Task</button>
